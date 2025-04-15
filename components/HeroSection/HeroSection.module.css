@@ -1,0 +1,104 @@
+/* components/HeroSection.module.css */
+.heroSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .title {
+    color: #fbcfe8; /* Pink color */
+    font-family: serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dot {
+    margin: 0 0.5rem;
+  }
+  
+  .phoneContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .phoneLink {
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .phoneLink:hover {
+    color: #a7f3d0; /* Light green color */
+  }
+  
+  .getInTouchBtn {
+    display: inline-block;
+    background-color: rgba(167, 243, 208, 0.8); /* Light green with transparency */
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); /* optional: adds a nice blur under the transparency */
+  }
+  
+  .getInTouchBtn:hover {
+    background-color: rgba(167, 243, 208, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .getInTouchBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Media queries for responsive design */
+  @media (min-width: 768px) {
+    .title {
+      font-size: 3.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+    }
+    
+    .phoneLink {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .title {
+      font-size: 4rem;
+    }
+  }

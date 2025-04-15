@@ -1,0 +1,237 @@
+/* src/app/contact-us/page.module.css */
+
+.main {
+    min-height: calc(100vh - 80px);
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f7f5;
+    font-family: 'Arial', sans-serif;
+    padding: 6rem .5rem;
+  }
+  
+  .contactContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contactHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .contactTitle {
+    color: #4a7c59;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #4a7c59;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  
+  .contactContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contactInfo {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 500px;
+  }
+  
+  .contactSection {
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionTitle {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+  }
+  
+  .contactLink {
+    display: block;
+    color: #4a7c59;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .contactLink:hover {
+    color: #2e5b3d;
+    text-decoration: underline;
+  }
+  
+  .hoursContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .hourRow {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 0.3rem;
+  }
+  
+  .day {
+    font-weight: 600;
+  }
+  
+  .hours {
+    color: #4a7c59;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    position: relative;
+  }
+  
+  .gardenImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .formContainer {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+  }
+  
+  .formTitle {
+    color: #4a7c59;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .formGroup {
+    width: 100%;
+  }
+  
+  .formInput,
+  .formTextarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formInput:focus,
+  .formTextarea:focus {
+    border-color: #4a7c59;
+    outline: none;
+  }
+  
+  .formTextarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .submitButton {
+    background-color: #4a7c59;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .submitButton:hover {
+    background-color: #2e5b3d;
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    .main {
+      padding: 5rem 2rem;
+    }
+    
+    .contactContent {
+      flex-direction: row;
+      align-items: stretch;
+    }
+    
+    .formContainer {
+      margin-top: 0;
+    }
+    
+    .submitButton {
+      width: auto;
+      align-self: flex-start;
+    }
+    
+    .contactForm {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .main {
+      padding: 5rem 2rem;
+    }
+    
+    .contactTitle {
+      font-size: 2.3rem;
+    }
+    
+    .imageContainer {
+      height: 500px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .contactTitle {
+      font-size: 2rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.3rem;
+    }
+    
+    .contactLink {
+      font-size: 1.1rem;
+    }
+    
+    .imageContainer {
+      height: 300px;
+    }
+    
+    .formTitle {
+      font-size: 1.5rem;
+    }
+  }

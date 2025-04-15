@@ -1,0 +1,192 @@
+/* src/app/about/page.module.css */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .heroSection {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background-image: url('/images/garden-path.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .heroSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #f8f8f8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 0;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .aboutSection, .designerSection {
+    margin-bottom: 4rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    color: #4a7c59;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4a7c59;
+    display: inline-block;
+  }
+  
+  .aboutContent, .designerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .textContent {
+    flex: 1;
+  }
+  
+  .paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .imageWrapper {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .aboutImage, .designerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ctaSection {
+    background-color: #f5f7f5;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ctaTitle {
+    font-size: 1.8rem;
+    color: #4a7c59;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    background-color: #8ed4ab;
+    color: #333;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .ctaButton:hover {
+    background-color: #4a7c59;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (min-width: 768px) {
+    .aboutContent, .designerContent {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .designerContent {
+      flex-direction: row-reverse;
+    }
+    
+    .textContent, .imageWrapper {
+      flex: 1;
+    }
+    
+    .pageTitle {
+      font-size: 4rem;
+    }
+    
+    .tagline {
+      font-size: 2rem;
+    }
+    
+    .ctaSection {
+      padding: 4rem 2rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .pageTitle {
+      font-size: 2.5rem;
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.5rem;
+    }
+    
+    .imageWrapper {
+      height: 300px;
+    }
+    
+    .ctaButton {
+      width: 100%;
+    }
+  }

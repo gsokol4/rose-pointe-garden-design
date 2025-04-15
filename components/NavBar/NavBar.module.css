@@ -1,0 +1,159 @@
+/* components/Navbar.module.css */
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    font-size: 26px;
+    background-color: #B5F1CC;
+    background-color: rgba(181, 241, 204, 0.5); /* this sets semi-transparent green */
+  }
+  
+  .navbarContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .phoneLink {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .phoneLink:hover {
+    color: #a7f3d0; /* Light green color */
+  }
+  
+  .phoneWrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phoneIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .phoneNumber {
+    margin-left: 0.5rem;
+    display: none;
+  }
+  
+  .desktopNav {
+    display: none;
+  }
+  
+  .navLink {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #a7f3d0;
+  }
+  
+  .menuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  /* Hamburger icon animation - improved symmetrical X */
+  .hamburgerIcon {
+    position: relative;
+    width: 24px;
+    height: 18px; /* Slightly reduced height for better proportions */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 1px;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  /* Center bar disappears */
+  .hamburgerIcon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* First bar rotates to form half of the X */
+  .hamburgerIcon.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    transform-origin: center;
+    width: 100%;
+  }
+
+  /* Last bar rotates to form other half of the X */
+  .hamburgerIcon.open .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+    transform-origin: center;
+    width: 100%
+  }
+  
+  .mobileMenu {
+    background-color: black;
+    color: white;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+  
+  .mobileMenu.open {
+    max-height: 300px;
+    padding: 1rem;
+  }
+  
+  .mobileMenuItems {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobileNavLink {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.75rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  .mobileNavLink:hover {
+    color: #a7f3d0;
+  }
+  
+  /* Media queries for responsive design */
+  @media (min-width: 768px) {
+    .phoneNumber {
+      display: inline;
+    }
+    
+    .desktopNav {
+      display: flex;
+    }
+    
+    .menuButton {
+      display: none;
+    }
+  }

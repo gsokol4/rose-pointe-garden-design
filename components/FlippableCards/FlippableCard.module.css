@@ -1,0 +1,169 @@
+/* components/FlippableCard.module.css */
+.cardContainer {
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    perspective: 1000px;
+    margin: 1rem;
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .front {
+    background-color: #f5f5f5;
+  }
+  
+  .back {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    color: white;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .backTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .backText {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    flex-grow: 1;
+    padding-bottom: 30px;
+  }
+  
+  .touchIndicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  .pulse {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  .learnMore {
+    display: inline-block;
+    padding: 0.5rem .8rem;
+    background-color: #4a8f29;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 80%;
+  }
+  
+  .learnMore:hover {
+    background-color: #3b7520;
+  }
+  
+  .backButton {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1rem;
+    background: none;
+    border: 1px solid #ddd;
+    padding: 0.6rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #666;
+    transition: all 0.3s;
+  }
+  
+  .backButton:hover {
+    background-color: #f5f5f5;
+  }
+  @media (min-width: 768px) {
+    .cardContainer {
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 1rem;
+    }
+  }

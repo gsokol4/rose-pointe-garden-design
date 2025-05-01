@@ -82,7 +82,7 @@ export default function ContactUs() {
           
           <div className={styles.imageContainer}>
             <Image 
-              src="/contact-us-image.png" 
+              src="/contact-us-image.webp" 
               alt="Rose Pointe Garden Path" 
               className={styles.gardenImage}
               width={600}
@@ -91,7 +91,7 @@ export default function ContactUs() {
             />
           </div>
         </div>
-        
+        {/*
         <div className={styles.formContainer}>
           <h2 className={styles.formTitle}>Send us a message</h2>
           <form className={styles.contactForm}>
@@ -141,6 +141,7 @@ export default function ContactUs() {
             </div>
           </form>
         </div>
+        */}
       </div>
     </main>
   );

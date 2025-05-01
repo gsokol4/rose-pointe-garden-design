@@ -1,0 +1,60 @@
+.footer {
+    background-color: #f9fcf7; /* Or a color that matches your design */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd; /* Optional: Add a border */
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Add some gap between items */
+  }
+  
+  .contactInfo {
+    display: flex;
+    flex-direction: column; /* Stack contact items vertically on small screens */
+    align-items: center; /* Center items horizontally */
+    gap: 10px;
+    margin-bottom: 10px; /* Add space before copyright on small screens */
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center; /* Vertically center icon and text */
+    gap: 8px; /* Space between icon and text */
+    color: #555; /* Adjust text color */
+    font-size: 0.9em;
+  }
+  .contactItem a {
+    color: #555;
+    text-decoration: none;
+  }
+  .contactItem a:hover{
+      color: #007bff; /* Change color on hover */
+  }
+  
+  .icon {
+    width: 16px; /* Adjust icon size as needed */
+    height: 16px;
+    color: #888; /* Icon color */
+  }
+  
+  .copyright {
+    font-size: 0.8em;
+    color: #777;
+  }
+  
+  /* Media query for larger screens to display contact info in a row */
+  @media (min-width: 768px) {
+    .footerContent {
+      flex-direction: row; /* Arrange items in a row on wider screens */
+      justify-content: space-between; /* Space them out */
+      align-items: center; /* Vertically center items */
+    }
+    .contactInfo {
+      flex-direction: row; /* Arrange contact items in a row */
+      margin-bottom: 0; /* Remove bottom margin on wider screens */
+    }
+  }

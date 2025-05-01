@@ -79,13 +79,13 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={isMenuOpen ? `${styles.mobileMenu} ${styles.open}` : styles.mobileMenu}>
         <div className={styles.mobileMenuItems}>
-          <Link href="/" className={styles.mobileNavLink}>
+          <Link href="/" className={styles.mobileNavLink} onClick={() => toggleMenu()}>
             Home
           </Link>
-          <Link href="/about" className={styles.mobileNavLink}>
+          <Link href="/about" className={styles.mobileNavLink} onClick={() => toggleMenu()}>
             About
           </Link>
-          <Link href="/contact-us" className={styles.mobileNavLink}>
+          <Link href="/contact-us" className={styles.mobileNavLink} onClick={() => toggleMenu()}>
             Contact Us
           </Link>
         </div>

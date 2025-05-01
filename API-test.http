@@ -1,0 +1,10 @@
+### Test the contact notification endpoint
+POST http://localhost:3000/api/contact
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "+15551234567",
+  "message": "Hello, I'm interested in learning more about your services. Please contact me when you have a moment."
+}

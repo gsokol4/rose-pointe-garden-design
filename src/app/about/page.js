@@ -45,7 +45,7 @@ export default function About() {
             
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/garden-flowers.jpg"
+                src="/summer-garden.webp"
                 alt="Beautiful garden flowers"
                 className={styles.aboutImage}
                 width={500}
@@ -62,7 +62,7 @@ export default function About() {
           <div className={styles.designerContent}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/designer.jpg"
+                src="/carolyn.jpeg"
                 alt="Carolyn Sokol, Garden Designer"
                 className={styles.designerImage}
                 width={400}

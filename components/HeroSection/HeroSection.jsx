@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import styles from './HeroSection.module.css';
 
-const HeroSection = ({ backgroundImage = './hero-home-large.png' }) => {
+const HeroSection = ({ backgroundImage = './homepage-hero.webp' }) => {
   return (
     <div 
       className={styles.heroSection}

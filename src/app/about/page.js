@@ -39,7 +39,7 @@ export default function About() {
           <div className={styles.aboutContent}>
             <div className={styles.textContent}>
               <p className={styles.paragraph}>
-                At Rose Pointe Garden Design, we believe that every garden should be as unique as the person who owns it. We specialize in creating customized garden designs that reflect our clients' individual styles, needs, and dreams. Whether you're starting fresh or reimagining your existing outdoor space, we work closely with you to craft a garden that feels personal, purposeful, and full of life. Our approach is rooted in listening—understanding what you love, how you live, and what your space can become.
+                At Rose Pointe Garden Design, we believe that every garden should be as unique as the person who owns it. We specialize in creating customized garden designs that reflect our clients&apos; individual styles, needs, and dreams. Whether you&apos;re starting fresh or reimagining your existing outdoor space, we work closely with you to craft a garden that feels personal, purposeful, and full of life. Our approach is rooted in listening—understanding what you love, how you live, and what your space can become.
               </p>
             </div>
             
@@ -73,7 +73,7 @@ export default function About() {
             
             <div className={styles.textContent}>
               <p className={styles.paragraph}>
-                Carolyn Sokol, the founder and lead designer at Rose Pointe, brings over 30 years of hands-on experience in gardening and landscape design. With a formal education in biology and plant life, she pairs scientific expertise with an artist's eye for beauty and detail. A true master of Ohio's native plants and growing conditions, Carolyn is passionate about gardens that thrive naturally while telling a story about their owners. She believes that great gardens don't just meet the needs of the people who enjoy them—they also respect and respond to the needs of the plants themselves.
+                Carolyn Sokol, the founder and lead designer at Rose Pointe, brings over 30 years of hands-on experience in gardening and landscape design. With a formal education in biology and plant life, she pairs scientific expertise with an artist&apos;s eye for beauty and detail. A true master of Ohio&apos;s native plants and growing conditions, Carolyn is passionate about gardens that thrive naturally while telling a story about their owners. She believes that great gardens don&apos;t just meet the needs of the people who enjoy them—they also respect and respond to the needs of the plants themselves.
               </p>
             </div>
           </div>

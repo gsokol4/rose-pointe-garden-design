@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.rosepointegardencompany.com/
+
+# Sitemaps
+Sitemap: https://www.rosepointegardencompany.com/sitemap.xml

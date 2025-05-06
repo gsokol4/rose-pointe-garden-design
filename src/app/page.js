@@ -2,6 +2,12 @@
 import HeroSection from '../../components/HeroSection/HeroSection';
 import GardenServices from '../../components/GardenServices/GardenServices';
 
+export const metadata = {
+  title: "Rose Pointe Garden Company | Get A Garden Today",
+  description:
+    "Transform your outdoor space with Rose Pointe Garden Company. We offer premium landscape design and garden services tailored to your style and space.",
+};
+
 export default function Home() {
   return (
     <main>

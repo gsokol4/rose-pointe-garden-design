@@ -12,7 +12,7 @@ const HeroSection = ({ backgroundImage = './homepage-hero.webp' }) => {
       
       <div className={styles.content}>
         <h1 className={styles.title}>
-          Rose Pointe Garden Design
+          Rose Pointe Garden Company
         </h1>
         
         <h2 className={styles.subtitle}>

@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './page.module.css';
 
+
+
 export default function About() {
   const [isMobile, setIsMobile] = useState(false);
   
@@ -27,7 +29,7 @@ export default function About() {
     <main className={styles.main}>
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1 className={styles.pageTitle}>Rose Pointe Garden Design</h1>
+          <h1 className={styles.pageTitle}>Rose Pointe Garden Company</h1>
           <p className={styles.tagline}>Imagine • Design • Create</p>
         </div>
       </div>
@@ -39,7 +41,7 @@ export default function About() {
           <div className={styles.aboutContent}>
             <div className={styles.textContent}>
               <p className={styles.paragraph}>
-                At Rose Pointe Garden Design, we believe that every garden should be as unique as the person who owns it. We specialize in creating customized garden designs that reflect our clients&apos; individual styles, needs, and dreams. Whether you&apos;re starting fresh or reimagining your existing outdoor space, we work closely with you to craft a garden that feels personal, purposeful, and full of life. Our approach is rooted in listening—understanding what you love, how you live, and what your space can become.
+                At Rose Pointe Garden Company, we believe that every garden should be as unique as the person who owns it. We specialize in creating customized garden designs that reflect our clients&apos; individual styles, needs, and dreams. Whether you&apos;re starting fresh or reimagining your existing outdoor space, we work closely with you to craft a garden that feels personal, purposeful, and full of life. Our approach is rooted in listening—understanding what you love, how you live, and what your space can become.
               </p>
             </div>
             

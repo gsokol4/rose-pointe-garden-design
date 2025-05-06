@@ -25,7 +25,7 @@ const Footer = () => {
             }
         </div>
         <div className={styles.copyright}>
-          &copy; {new Date().getFullYear()} Rose Pointe Garden Design. All rights reserved.
+          &copy; {new Date().getFullYear()} Rose Pointe Garden Company. All rights reserved.
         </div>
         {/* Add social media icons here if needed.  Example:
         <div className={styles.socialIcons}>

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Head from "next/head";
 import Navbar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer'
+import GoogleTag from '../../components/GoogleTag/GoogleTag';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <GoogleTag />
       </body>
     </html>
   );

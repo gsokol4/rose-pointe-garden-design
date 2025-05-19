@@ -3,6 +3,7 @@ import Head from "next/head";
 import Navbar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer'
 import GoogleTag from '../../components/GoogleTag/GoogleTag';
+import GoogleAnalytics from '../../components/GoogleAnalytics/GoogleAnalytics';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -38,7 +39,12 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
-        <GoogleTag />
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <GoogleTag />
+            <GoogleAnalytics />
+          </>
+        )}
       </body>
     </html>
   );

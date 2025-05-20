@@ -8,22 +8,32 @@ export default function GoogleTag() {
   const handleCallConversion = () => {
     // Check if gtag is available
     if (typeof window !== 'undefined' && window.gtag) {
+      // Use the correct conversion label for your "Purchase" conversion action
       window.gtag('event', 'conversion', {
         'send_to': 'AW-412695016/s2HICOu748caEOjz5MQB',
-        'transaction_id': Date.now().toString() // Generate a unique transaction ID
+        'value': 1.0,  // Match the $1 value you set in Google Ads
+        'currency': 'USD',
+        'transaction_id': `call_${Date.now()}` // Generate a unique transaction ID with prefix
       });
+      console.log('Call conversion tracked'); // Helpful for debugging
     }
   };
 
   // Attach the event listener to all phone links on the page after component mounts
   React.useEffect(() => {
-    const phoneLinks = document.querySelectorAll('[href^="tel:"]');
-    phoneLinks.forEach(link => {
-      link.addEventListener('click', handleCallConversion);
-    });
+    // Wait a short moment to ensure the DOM is fully loaded
+    setTimeout(() => {
+      const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+      console.log(`Found ${phoneLinks.length} phone links to track`);
+      
+      phoneLinks.forEach(link => {
+        link.addEventListener('click', handleCallConversion);
+      });
+    }, 1000);
 
     // Clean up event listeners when component unmounts
     return () => {
+      const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
       phoneLinks.forEach(link => {
         link.removeEventListener('click', handleCallConversion);
       });

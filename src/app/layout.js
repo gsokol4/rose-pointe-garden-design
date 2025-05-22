@@ -44,9 +44,9 @@ export default function RootLayout({ children }) {
           <>
             <GoogleTag />
             <GoogleAnalytics />
-            <ClarityProvider />
           </>
         )}
+        <ClarityProvider />
       </body>
     </html>
   );

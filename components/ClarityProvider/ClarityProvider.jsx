@@ -1,11 +1,12 @@
 'use client';
 import { useEffect } from 'react';
-import { clarity } from 'clarity-js';
 
 export default function ClarityProvider() {
   useEffect(() => {
     if (process.env.NODE_ENV === 'production') {
-      clarity.init('rnczxzjf3d');
+      import('clarity-js').then((m) => {
+        m.clarity.init('rnczxzjf3d');
+      });
     }
   }, []);
 

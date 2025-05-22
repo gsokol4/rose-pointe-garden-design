@@ -4,6 +4,7 @@ import Navbar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer'
 import GoogleTag from '../../components/GoogleTag/GoogleTag';
 import GoogleAnalytics from '../../components/GoogleAnalytics/GoogleAnalytics';
+import ClarityProvider from "../../components/ClarityProvider/ClarityProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
           <>
             <GoogleTag />
             <GoogleAnalytics />
+            <ClarityProvider />
           </>
         )}
       </body>

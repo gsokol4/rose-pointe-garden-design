@@ -18,7 +18,7 @@ export default function LandscapeDesign() {
         <section className={styles.hero}>
           <div className={styles.heroContent}>
             <h1>Rose Pointe Garden Company</h1>
-            <h2>Professional Landscape Design in Northease Ohio</h2>
+            <h2>Professional Landscape Design in Northeast Ohio</h2>
             <p>Transform your outdoor space with Rose Pointe Garden Company, serving Geauga County, Lake County, Gates Mills, and Chagrin Falls. Our expert landscape designers create personalized garden designs that bring your vision to life.</p>
             <div className={styles.heroButtons}>
               <a href="tel:4403138489" className={`${styles.btn} ${styles.btnPrimary}`}>Call Now</a>
@@ -36,8 +36,8 @@ export default function LandscapeDesign() {
                 <div className={styles.serviceImage} style={{backgroundImage: 'url(/landing-pages/landscapers-near-me/design.webp)'}}></div>
                 <div className={styles.serviceContent}>
                   <h3>Custom Landscape Design</h3>
-                  <p>Our professional landscape designers create personalized garden plans tailored to your property's unique characteristics and aesthetic preferences.</p>
-                  <p>From selecting plants that thrive in Ohio's climate to creating harmonious layouts, we design landscapes that bloom with beauty year-round.</p>
+                  <p>Our professional landscape designers create personalized garden plans tailored to your property&apos;s unique characteristics and aesthetic preferences.</p>
+                  <p>From selecting plants that thrive in Ohio&apos;s climate to creating harmonious layouts, we design landscapes that bloom with beauty year-round.</p>
                 </div>
               </div>
               <div className={styles.serviceCard}>
@@ -71,11 +71,11 @@ export default function LandscapeDesign() {
               </div>
               <div className={styles.areaCard}>
                 <h3>Lake County</h3>
-                <p>Expert landscape designers serving Lake County with custom garden designs that thrive in Ohio's unique climate and soil conditions.</p>
+                <p>Expert landscape designers serving Lake County with custom garden designs that thrive in Ohio&apos;s unique climate and soil conditions.</p>
               </div>
               <div className={styles.areaCard}>
                 <h3>Gates Mills & Chagrin Falls</h3>
-                <p>Specialized landscape design services for Gates Mills and Chagrin Falls, creating beautiful outdoor spaces that complement your home's architecture.</p>
+                <p>Specialized landscape design services for Gates Mills and Chagrin Falls, creating beautiful outdoor spaces that complement your home&apos;s architecture.</p>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function LandscapeDesign() {
               <div className={styles.processStep}>
                 <div className={styles.stepNumber}>1</div>
                 <h3>Free Consultation</h3>
-                <p>This is your opportunity to meet your designer, discuss your needs, and get to know the process. During the consultation, your designer will explore your garden goals, preferences, and inspirations while assessing your site's layout, soil conditions, sunlight, and existing features. They will provide tailored recommendations to bring your vision to life.</p>
+                <p>This is your opportunity to meet your designer, discuss your needs, and get to know the process. During the consultation, your designer will explore your garden goals, preferences, and inspirations while assessing your site&apos;s layout, soil conditions, sunlight, and existing features. They will provide tailored recommendations to bring your vision to life.</p>
                 <p>You will work with your designer from start to finish to ensure your project is executed seamlessly. Since every project is unique and highly detailed, we are not able to give out estimates during the consultation.</p>
                 <p>Take the first step toward creating your dream garden—schedule your consultation today!</p>
               </div>
@@ -97,19 +97,19 @@ export default function LandscapeDesign() {
                 <div className={styles.stepNumber}>2</div>
                 <h3>Custom Design Presentation - $350</h3>
                 <p>After your consultation, your designer will create a custom garden design tailored to your unique preferences, site conditions, and goals. The design presentation is your chance to see your vision come to life, with detailed plans, plant selections, and creative solutions that maximize the potential of your space.</p>
-                <p>During this phase, we'll review the design together, answer your questions, and ensure every detail aligns with your vision. There will be the opportunity for one revision.</p>
-                <p>With your approval, we'll move forward to the next phase—turning your dream garden into reality.</p>
+                <p>During this phase, we&apos;ll review the design together, answer your questions, and ensure every detail aligns with your vision. There will be the opportunity for one revision.</p>
+                <p>With your approval, we&apos;ll move forward to the next phase—turning your dream garden into reality.</p>
               </div>
               <div className={styles.processStep}>
                 <div className={styles.stepNumber}>3</div>
                 <h3>Custom Installation Quote</h3>
-                <p>Based on your approved design, we'll provide a detailed quote for the installation of your new landscape. Our pricing reflects the quality of materials, expertise of our team, and the attention to detail that ensures a stunning result.</p>
+                <p>Based on your approved design, we&apos;ll provide a detailed quote for the installation of your new landscape. Our pricing reflects the quality of materials, expertise of our team, and the attention to detail that ensures a stunning result.</p>
                 <p>Whether you prefer to leave the hard work to us or get hands-on with your garden transformation, we have you covered:</p>
                 <ul className={styles.processList}>
-                  <li><strong>Full-Service Installation:</strong> Let our expert team handle every aspect of your garden's installation, ensuring precision and care from start to finish. We'll manage everything, from prepping the site to placing the final plant, so you can sit back and watch your dream garden bloom.</li>
-                  <li><strong>DIY with Plant Delivery:</strong> For the hands-on gardener, we offer a DIY option with delivery of all your selected plants directly to your door. With our detailed design plans and expert recommendations, you'll have all the tools you need to bring your vision to life.</li>
+                  <li><strong>Full-Service Installation:</strong> Let our expert team handle every aspect of your garden&apos;s installation, ensuring precision and care from start to finish. We&apos;ll manage everything, from prepping the site to placing the final plant, so you can sit back and watch your dream garden bloom.</li>
+                  <li><strong>DIY with Plant Delivery:</strong> For the hands-on gardener, we offer a DIY option with delivery of all your selected plants directly to your door. With our detailed design plans and expert recommendations, you&apos;ll have all the tools you need to bring your vision to life.</li>
                 </ul>
-                <p>Whichever path you choose, we're here to support you every step of the way. Let's create a garden that inspires and thrives!</p>
+                <p>Whichever path you choose, we&apos;re here to support you every step of the way. Let&apos;s create a garden that inspires and thrives!</p>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function LandscapeDesign() {
               </div>
               <div className={styles.benefitCard}>
                 <h3>Personalized Design</h3>
-                <p>Every landscape design is custom-created to match your vision, lifestyle, and property's unique characteristics. No cookie-cutter solutions.</p>
+                <p>Every landscape design is custom-created to match your vision, lifestyle, and property&apos;s unique characteristics. No cookie-cutter solutions.</p>
               </div>
               <div className={styles.benefitCard}>
                 <h3>Professional Installation</h3>

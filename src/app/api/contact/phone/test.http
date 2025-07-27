@@ -1,0 +1,300 @@
+### Contact API Testing - REST Client Format
+
+# Base URL (adjust for your environment)
+@baseUrl = http://localhost:3000
+# @baseUrl = https://yourapp.vercel.app
+
+### 1. Valid request with phone number only
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "+1-555-123-4567"
+}
+
+###
+
+### 2. Valid request with phone number and message
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "(555) 987-6543",
+  "message": "(this is a test)Hello, I'm interested in your services. Please contact me at your earliest convenience."
+}
+
+###
+
+### 3. International phone number
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "+44 20 7946 0958",
+  "message": "(this is a test)Calling from the UK, interested in your products."
+}
+
+###
+
+### 4. Phone number with various formatting
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "555.123.4567",
+  "message": "Testing different phone formats"
+}
+
+###
+
+### 5. Test sanitization - HTML in message (should be stripped)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "This is a test <script>alert('xss')</script> with <b>HTML</b> tags and <a href='javascript:void(0)'>malicious links</a>."
+}
+
+###
+
+### 6. Test sanitization - Special characters in phone
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "+1 (555) 123-4567 ext. 123",
+  "message": "Testing phone number sanitization"
+}
+
+###
+
+### 7. Long message test (testing length limits)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. This message is intentionally very long to test the 1000 character limit and see how the API handles it."
+}
+
+###
+
+### ERROR CASES - Testing validation and sanitization
+
+### 8. Missing phone number (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "message": "No phone number provided"
+}
+
+###
+
+### 9. Empty phone number (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "",
+  "message": "Empty phone number test"
+}
+
+###
+
+### 10. Invalid phone number format (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "abc-def-ghij",
+  "message": "Invalid phone format test"
+}
+
+###
+
+### 11. Phone number too short (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "123",
+  "message": "Phone too short"
+}
+
+###
+
+### 12. Phone number too long (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "12345678901234567890",
+  "message": "Phone too long"
+}
+
+###
+
+### 13. Unexpected fields (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Testing extra fields",
+  "email": "test@example.com",
+  "name": "John Doe",
+  "maliciousField": "<script>alert('xss')</script>"
+}
+
+###
+
+### 14. Wrong content type (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: text/plain
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Wrong content type"
+}
+
+###
+
+### 15. Invalid JSON (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Invalid JSON - missing quote
+}
+
+###
+
+### 16. Non-object body (should return 400)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+"This is not an object"
+
+###
+
+### 17. GET request (should return 405 - Method Not Allowed)
+GET {{baseUrl}}/api/contact/phone
+
+###
+
+### 18. PUT request (should return 405 - Method Not Allowed)
+PUT {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567"
+}
+
+###
+
+### RATE LIMITING TESTS
+
+### 19. Rate limit test - Send multiple requests quickly
+# Run this request 6 times in succession to test rate limiting
+# (The 6th request should return 429)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Rate limit test #1"
+}
+
+###
+
+### 20. Rate limit test #2
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Rate limit test #2"
+}
+
+###
+
+### 21. Rate limit test #3
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Rate limit test #3"
+}
+
+###
+
+### 22. Rate limit test #4
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Rate limit test #4"
+}
+
+###
+
+### 23. Rate limit test #5
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Rate limit test #5"
+}
+
+###
+
+### 24. Rate limit test #6 (should return 429)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Rate limit test #6 - This should be blocked"
+}
+
+###
+
+### EDGE CASES
+
+### 25. Very minimal valid request
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234"
+}
+
+###
+
+### 26. Phone with only spaces (should be sanitized and validated)
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "   555 123 4567   ",
+  "message": "Phone with spaces"
+}
+
+###
+
+### 27. Message with newlines and special characters
+POST {{baseUrl}}/api/contact/phone
+Content-Type: application/json
+
+{
+  "phoneNumber": "5551234567",
+  "message": "Line 1\nLine 2\nSpecial chars: !@#$%^&*()_+-=[]{}|;':\",./<>?\nEmoji: 📞📧"
+}
+
+###

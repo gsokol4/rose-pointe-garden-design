@@ -1,7 +1,8 @@
 ### Contact API Testing - REST Client Format
 
 # Base URL (adjust for your environment)
-@baseUrl = http://localhost:3000
+// @baseUrl = http://localhost:3000
+@baseUrl = http://rosepointegardencompany.com
 # @baseUrl = https://yourapp.vercel.app
 
 ### 1. Valid request with phone number only
@@ -31,7 +32,7 @@ Content-Type: application/json
 
 {
   "phoneNumber": "+44 20 7946 0958",
-  "message": "(this is a test)Calling from the UK, interested in your products."
+  "message": "(this is a test message)Calling from the UK, interested in your products."
 }
 
 ###

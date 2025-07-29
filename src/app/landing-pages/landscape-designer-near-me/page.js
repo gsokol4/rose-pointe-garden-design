@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import ContactForm from '../../../../components/ContactForm/ContactForm';
 import styles from './page.module.css';
 
 export default function LandscapeDesign() {
@@ -14,6 +15,7 @@ export default function LandscapeDesign() {
       </Head>
 
       <div className={styles.pageContainer}>
+
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.heroContent}>
@@ -21,8 +23,8 @@ export default function LandscapeDesign() {
             <h2>Professional Landscape Design in Northeast Ohio</h2>
             <p>Transform your outdoor space with Rose Pointe Garden Company, serving Geauga County, Lake County, Gates Mills, and Chagrin Falls. Our expert landscape designers create personalized garden designs that bring your vision to life.</p>
             <div className={styles.heroButtons}>
-              <a href="tel:4403138489" className={`${styles.btn} ${styles.btnPrimary}`}>Call Now</a>
-              <Link href="#consultation" className={`${styles.btn} ${styles.btnSecondary}`}>Free Consultation</Link>
+              <a href="tel:4403138489" className={`${styles.btn} ${styles.btnPrimary} ${styles.mobileOnly}`}>Call Us Now 440-313-8489 </a>
+              <Link href="#consultation" className={`${styles.btn} ${styles.btnPrimary}`}>Free Consultation</Link>
             </div>
           </div>
         </section>
@@ -135,15 +137,19 @@ export default function LandscapeDesign() {
             </div>
           </div>
         </section>
+        <section id="consultation">
+          <ContactForm/>
+        </section>
 
-        {/* CTA Section */}
-        <section id="consultation" className={styles.cta}>
+        {/* CTA Section 
+        <section className={styles.cta}>
           <div className={styles.container}>
             <h2>Ready to Transform Your Outdoor Space?</h2>
             <p>Take the first step toward creating the garden of your dreams. Schedule your free consultation with our expert landscape designers and discover how Rose Pointe can bring your vision to life.</p>
             <a href="tel:4403138489" className={`${styles.btn} ${styles.btnPrimary}`}>Call 440-313-8489</a>
           </div>
         </section>
+        */}
       </div>
     </>
   );

@@ -3,8 +3,8 @@
 
 import { useState, useEffect } from 'react';
 import styles from './page.module.css';
-import Link from 'next/link';
 import Image from 'next/image';
+import ContactForm from '../../../components/ContactForm/ContactForm';
 
 export default function ContactUs() {
   const [isMobile, setIsMobile] = useState(false);
@@ -30,7 +30,9 @@ export default function ContactUs() {
         <div className={styles.contactHeader}>
           <h1 className={styles.contactTitle}>Contact Us</h1>
         </div>
-        
+        <div className={styles.contactForm}>
+          <ContactForm />
+        </div>
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
             <div className={styles.contactSection}>
@@ -79,7 +81,6 @@ export default function ContactUs() {
               </div>
             </div>
           </div>
-          
           <div className={styles.imageContainer}>
             <Image 
               src="/contact-us-image.webp" 

@@ -2,13 +2,12 @@
 
 .main {
     min-height: calc(100vh - 80px);
-    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f5f7f5;
     font-family: 'Arial', sans-serif;
-    padding: 6rem .5rem;
+    padding: 6rem .5rem 0rem .5rem;
   }
   
   .contactContainer {
@@ -30,7 +29,9 @@
     display: inline-block;
     padding-bottom: 0.5rem;
   }
-  
+  .contactForm{
+    padding: 0px;
+  }
   .contactContent {
     display: flex;
     flex-direction: column;
@@ -177,14 +178,16 @@
   /* Responsive styles */
   @media (min-width: 768px) {
     .main {
-      padding: 5rem 2rem;
+      padding: 6rem 2rem 0rem 2rem;
     }
     
     .contactContent {
       flex-direction: row;
       align-items: stretch;
     }
-    
+    .contactForm{
+    padding: 0px 0px 40px 0px;
+    }
     .formContainer {
       margin-top: 0;
     }
@@ -201,9 +204,6 @@
   }
   
   @media (min-width: 1024px) {
-    .main {
-      padding: 5rem 2rem;
-    }
     
     .contactTitle {
       font-size: 2.3rem;

@@ -83,6 +83,15 @@
   transition: all 0.3s ease;
   font-family: inherit;
   resize: vertical;
+
+  /* Added for visibility and usability */
+  color: #2d5530; /* Ensures entered text is visible on all devices */
+  line-height: 1.4; /* Improves legibility */
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #7a9a7a; /* Softer placeholder for contrast */
 }
 
 .input:focus,
@@ -272,8 +281,6 @@
   50% { transform: scale(1.1); }
 }
 
-/* Responsive Design */
-
 /* Tablet Styles */
 @media (max-width: 768px) {
   .contactForm {
@@ -324,7 +331,7 @@
   .input,
   .textarea {
     padding: 0.75rem;
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px; /* Prevents zoom on iOS/Android when focusing */
   }
   
   .textarea {

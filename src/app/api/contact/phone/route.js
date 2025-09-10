@@ -1,9 +1,4 @@
 const nodemailer = require("nodemailer");
-import redis from '../../../../../util/redis'; // adjust the path if needed
-
-// Rate limit config
-const RATE_LIMIT_MAX = 5;
-const RATE_LIMIT_WINDOW_SECONDS = 60;
 
 // Email configuration
 const createTransporter = () => {
@@ -27,23 +22,7 @@ const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
 const MIN_PHONE_LENGTH = 7;
 
 export async function POST(request) {
-  const ip = request.headers.get('x-forwarded-for') || 'unknown';
-  const rateLimitKey = `rate_limit:${ip}`;
-
   try {
-    // Rate limiting logic
-    const current = await redis.incr(rateLimitKey);
-    if (current === 1) {
-      await redis.expire(rateLimitKey, RATE_LIMIT_WINDOW_SECONDS);
-    }
-
-    if (current > RATE_LIMIT_MAX) {
-      return Response.json(
-        { error: 'Too many requests. Please try again later.' },
-        { status: 429 }
-      );
-    }
-
     // Check content type
     const contentType = request.headers.get('content-type');
     if (!contentType || !contentType.includes('application/json')) {

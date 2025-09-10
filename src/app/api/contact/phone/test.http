@@ -2,8 +2,8 @@
 
 # Base URL (adjust for your environment)
 // @baseUrl = http://localhost:3000
-@baseUrl = http://rosepointegardencompany.com
-# @baseUrl = https://yourapp.vercel.app
+# @baseUrl = http://rosepointegardencompany.com
+@baseUrl = http://localhost:3000
 
 ### 1. Valid request with phone number only
 POST {{baseUrl}}/api/contact/phone
